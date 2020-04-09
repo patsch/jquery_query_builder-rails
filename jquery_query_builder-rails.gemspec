@@ -6,11 +6,11 @@ require 'jquery_query_builder/rails/version'
 Gem::Specification.new do |spec|
   spec.name          = "jquery_query_builder-rails"
   spec.version       = JqueryQueryBuilder::Rails::VERSION
-  spec.authors       = ["Matthew Hirst"]
-  spec.email         = ["hirst.mat@gmail.com"]
+  spec.authors       = ["Matthew Hirst","Patrick Dockhorn"]
+  spec.email         = ["hirst.mat@gmail.com","patrick@apptastic.com.au"]
 
-  spec.summary       = %q{The jQuery Query Builder Rule Evaluator and JavaScript library + Dependencies ready for the Rails Asset Pipeline.}
-  spec.homepage      = "https://github.com/SixiS/jquery_query_builder-rails"
+  spec.summary       = %q{The jQuery Query Builder Rule Evaluator and JavaScript library + Dependencies ready for the Rails Asset Pipeline. Updated for Bootstrap 4.}
+  spec.homepage      = "https://github.com/patsch/jquery_query_builder-rails"
   spec.license       = "MIT"
 
   spec.files = Dir["{lib,vendor}/**/*"] + ["LICENSE.txt", "CODE_OF_CONDUCT.md", "README.md"]
