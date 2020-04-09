@@ -2686,23 +2686,23 @@ QueryBuilder.templates.group = '\
 <div id="{{= it.group_id }}" class="rules-group-container"> \
   <div class="rules-group-header"> \
     <div class="btn-group pull-right group-actions"> \
-      <button type="button" class="btn btn-xs btn-success" data-add="rule"> \
+      <button type="button" class="btn btn-sm btn-success" data-add="rule"> \
         <i class="{{= it.icons.add_rule }}"></i> {{= it.translate("add_rule") }} \
       </button> \
       {{? it.settings.allow_groups===-1 || it.settings.allow_groups>=it.level }} \
-        <button type="button" class="btn btn-xs btn-success" data-add="group"> \
+        <button type="button" class="btn btn-sm btn-success" data-add="group"> \
           <i class="{{= it.icons.add_group }}"></i> {{= it.translate("add_group") }} \
         </button> \
       {{?}} \
       {{? it.level>1 }} \
-        <button type="button" class="btn btn-xs btn-danger" data-delete="group"> \
+        <button type="button" class="btn btn-sm btn-danger" data-delete="group"> \
           <i class="{{= it.icons.remove_group }}"></i> {{= it.translate("delete_group") }} \
         </button> \
       {{?}} \
     </div> \
     <div class="btn-group group-conditions"> \
       {{~ it.conditions: condition }} \
-        <label class="btn btn-xs btn-primary"> \
+        <label class="btn btn-sm btn-primary"> \
           <input type="radio" name="{{= it.group_id }}_cond" value="{{= condition }}"> {{= it.translate("conditions", condition) }} \
         </label> \
       {{~}} \
@@ -2720,7 +2720,7 @@ QueryBuilder.templates.rule = '\
 <div id="{{= it.rule_id }}" class="rule-container"> \
   <div class="rule-header"> \
     <div class="btn-group pull-right rule-actions"> \
-      <button type="button" class="btn btn-xs btn-danger" data-delete="rule"> \
+      <button type="button" class="btn btn-sm btn-danger" data-delete="rule"> \
         <i class="{{= it.icons.remove_rule }}"></i> {{= it.translate("delete_rule") }} \
       </button> \
     </div> \
@@ -3959,7 +3959,7 @@ QueryBuilder.define('bt-checkbox', function(options) {
  * @descriptioon Applies Bootstrap Select on filters and operators combo-boxes.
  * @param {object} [options]
  * @param {string} [options.container='body']
- * @param {string} [options.style='btn-inverse btn-xs']
+ * @param {string} [options.style='btn-inverse btn-sm']
  * @param {int|string} [options.width='auto']
  * @param {boolean} [options.showIcon=false]
  * @throws MissingLibraryError
@@ -3995,7 +3995,7 @@ QueryBuilder.define('bt-selectpicker', function(options) {
     });
 }, {
     container: 'body',
-    style: 'btn-inverse btn-xs',
+    style: 'btn-inverse btn-sm',
     width: 'auto',
     showIcon: false
 });
@@ -4305,7 +4305,7 @@ QueryBuilder.define('filter-description', function(options) {
             }
             else {
                 if ($b.length === 0) {
-                    $b = $('<button type="button" class="btn btn-xs btn-info filter-description" data-toggle="popover"><i class="' + options.icon + '"></i></button>');
+                    $b = $('<button type="button" class="btn btn-sm btn-info filter-description" data-toggle="popover"><i class="' + options.icon + '"></i></button>');
                     $b.prependTo(rule.$el.find(QueryBuilder.selectors.rule_actions));
 
                     $b.popover({
@@ -4345,7 +4345,7 @@ QueryBuilder.define('filter-description', function(options) {
             }
             else {
                 if ($b.length === 0) {
-                    $b = $('<button type="button" class="btn btn-xs btn-info filter-description" data-toggle="bootbox"><i class="' + options.icon + '"></i></button>');
+                    $b = $('<button type="button" class="btn btn-sm btn-info filter-description" data-toggle="bootbox"><i class="' + options.icon + '"></i></button>');
                     $b.prependTo(rule.$el.find(QueryBuilder.selectors.rule_actions));
 
                     $b.on('click', function() {
@@ -4422,7 +4422,7 @@ QueryBuilder.define('invert', function(options) {
         this.on('getGroupTemplate.filter', function(h) {
             var $h = $(h.value);
             $h.find(Selectors.condition_container).after(
-                '<button type="button" class="btn btn-xs btn-default" data-invert="group">' +
+                '<button type="button" class="btn btn-sm btn-default" data-invert="group">' +
                 '<i class="' + options.icon + '"></i> ' + self.translate('invert') +
                 '</button>'
             );
@@ -4433,7 +4433,7 @@ QueryBuilder.define('invert', function(options) {
             this.on('getRuleTemplate.filter', function(h) {
                 var $h = $(h.value);
                 $h.find(Selectors.rule_actions).prepend(
-                    '<button type="button" class="btn btn-xs btn-default" data-invert="rule">' +
+                    '<button type="button" class="btn btn-sm btn-default" data-invert="rule">' +
                     '<i class="' + options.icon + '"></i> ' + self.translate('invert') +
                     '</button>'
                 );
@@ -4985,7 +4985,7 @@ QueryBuilder.define('not-group', function(options) {
         this.on('getGroupTemplate.filter', function(h) {
             var $h = $(h.value);
             $h.find(QueryBuilder.selectors.condition_container).prepend(
-                '<button type="button" class="btn btn-xs btn-default" data-not="group">' +
+                '<button type="button" class="btn btn-sm btn-default" data-not="group">' +
                 '<i class="' + options.icon_unchecked + '"></i> ' + self.translate('NOT') +
                 '</button>'
             );
