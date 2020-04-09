@@ -1,6 +1,10 @@
-# jQuery QueryBuilder - rails
+# jQuery QueryBuilder for Bootstrap 4 - rails
 
-Many thanks to [mistic100](https://github.com/mistic100) for the awesome jQuery plugin.
+I updated [SixiS](https://github.com/SixiS) jQuery Builder Plugin with [Taylor993](https://github.com/Tailor993)'s 
+updated jQueryBuilder core so that this Rails Gem will now work nicely with Bootstrap 4 - Enjoy !  
+
+Many thanks to [mistic100](https://github.com/mistic100) for the awesome jQuery plugin, [SixiS](https://github.com/SixiS) for the jQuery Builder Rails Gem and [Taylor993](https://github.com/Tailor993)
+for the Bootstrap 4 upgrade of [mistic100](https://github.com/mistic100)'s plugin. 
 
 This gem has 2 parts.
 - [Assets needed for the jquery-query-builder plugin for the rails asset pipeline](#asset-pipeline-part)
@@ -20,7 +24,7 @@ Please see the [documentation](http://querybuilder.js.org/) for details.
 
 The two dependencies that are not included with this gem are:
 - jQuery >= 1.10
-- Bootstrap >= 3.1 (CSS Buttons and Utilities only)
+- Bootstrap >= 4.1 (CSS Buttons and Utilities only)
 
 You probably already have jQuery included in your Rails project and the bootstrap dependency is optional.
 Please see this [how to](http://querybuilder.js.org/dev/no-bootstrap.html) to go on without boostrap.
